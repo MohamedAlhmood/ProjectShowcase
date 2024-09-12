@@ -7,7 +7,7 @@ with st.form(key='email'):
     message = st.text_area('Your Message')
     message = f"""\
 Subject: New email from {userEmail}
-{message}\nFrom: {userEmail}"""
+{message}\n\nFrom: {userEmail}"""
     button = st.form_submit_button('Submit')
     if button:
         sendMail(message)
