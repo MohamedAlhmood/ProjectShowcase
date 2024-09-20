@@ -14,17 +14,18 @@ st.write(content2)
 
 col3 ,col4, col5 = st.columns([1.5,0.5,1.5])
 with col3:
-    for index,row in csvData[:10].iterrows():
+    for index,row in csvData[:3].iterrows():
         st.header(row['title'])
         st.write(row['description'])
         st.image(f"images/{row['image']}")
         st.write("[Source Code]("+row['url']+')')
 
 
-with col5:
-    for index,row in csvData[10:].iterrows():
-        st.header(row['title'])
-        st.write(row['description'])
-        st.image(f"images/{row['image']}")
-        #st.write("[Source Code...(]"+row['url']+')')
-        st.write('[Source Code]('+row['url']+')')
+
+#with col5:
+#    for index,row in csvData[10:].iterrows():
+#        st.header(row['title'])
+#        st.write(row['description'])
+#        st.image(f"images/{row['image']}")
+#        #st.write("[Source Code...(]"+row['url']+')')
+#        st.write('[Source Code]('+row['url']+')')
