@@ -20,7 +20,7 @@ with col1:
     st.image(img)
 with col2:
     st.title("Mohamed Alhmood")
-    content = """'Hello, my name is Mohamed! I am a student at the University of Michigan, majoring in Software Engineering. I am proficient in Python and C++, and this website is designed to showcase the projects I have created during my programming journey."""
+    content = """Hello, my name is Mohamed! I am a student at the University of Michigan, majoring in Software Engineering. I am proficient in Python and C++, and this website is designed to showcase the projects I have created during my programming journey."""
     st.info(content)
 content2 = """***Below are some of my projects. Feel free to contact me!***"""
 st.write(content2)
