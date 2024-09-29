@@ -11,7 +11,7 @@ col1,col2 = st.columns(2)
 csvData = pandas.read_csv('static/data.csv',sep=';')
 
 
-url_icon = "https://raw.githubusercontent.com/MohamedAlhmood/ProjectShowcase/refs/heads/master/image.jpg"
+url_icon = "https://raw.githubusercontent.com/MohamedAlhmood/ProjectShowcase/refs/heads/master/static/Images/image.jpg"
 response = requests.get(url_icon)
 img = Image.open(BytesIO(response.content))
 
