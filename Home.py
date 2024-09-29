@@ -20,7 +20,7 @@ with col1:
     st.image(img)
 with col2:
     st.title("Mohamed Alhmood")
-    content = """Hello My names Mohamed! I am a student at the University Of Michigan And I'm a software engineering major. I am proficient in Python and C++ and this page is a website to showcase my projects that I have made so far in my journey of programming"""
+    content = """'Hello, my name is Mohamed! I am a student at the University of Michigan, majoring in Software Engineering. I am proficient in Python and C++, and this website is designed to showcase the projects I have created during my programming journey."""
     st.info(content)
 content2 = """***Below are some of my projects. Feel free to contact me!***"""
 st.write(content2)
@@ -36,7 +36,7 @@ with col3:
         st.image(img)
         st.write("[Source Code]("+row['url']+')')
 with col5:
-    for index,row in csvData[2:4].iterrows():
+    for index,row in csvData[2:5].iterrows():
         st.header(row['title'])
         st.write(row['description'])
         url_icon = row['image']
