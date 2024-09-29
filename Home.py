@@ -7,7 +7,7 @@ col1,col2 = st.columns(2)
 csvData = pandas.read_csv('static/data.csv',sep=';')
 image_path = Path('image.jpg')
 with col1:
-    st.image(str(image_path))
+    st.image('image.jpg')
 with col2:
     st.title("Mohamed Alhmood")
     content = """Hello My names Mohamed! I am a student at the University Of Michigan And I'm a software engineering major. I am proficient in Python and C++ and this page is a website to showcase my projects that I have made so far in my journey of programming"""
