@@ -1,13 +1,24 @@
 import streamlit as st
+from PIL import Image
+from io import BytesIO
+
 import pandas
 from pathlib import Path
+import requests
 
 st.set_page_config(layout='wide')
 col1,col2 = st.columns(2)
 csvData = pandas.read_csv('static/data.csv',sep=';')
+
+
 image_path = Path('image.jpg')
+url_icon = "https://raw.githubusercontent.com/MohamedAlhmood/ProjectShowcase/refs/heads/master/image.jpg"
+response = requests.get(url_icon)
+img = Image.open(BytesIO(response.content))
+
+
 with col1:
-    st.image('ProjectsPage/image.jpg')
+    st.image(img)
 with col2:
     st.title("Mohamed Alhmood")
     content = """Hello My names Mohamed! I am a student at the University Of Michigan And I'm a software engineering major. I am proficient in Python and C++ and this page is a website to showcase my projects that I have made so far in my journey of programming"""
