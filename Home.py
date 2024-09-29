@@ -11,7 +11,6 @@ col1,col2 = st.columns(2)
 csvData = pandas.read_csv('static/data.csv',sep=';')
 
 
-image_path = Path('image.jpg')
 url_icon = "https://raw.githubusercontent.com/MohamedAlhmood/ProjectShowcase/refs/heads/master/image.jpg"
 response = requests.get(url_icon)
 img = Image.open(BytesIO(response.content))
@@ -31,14 +30,20 @@ with col3:
     for index,row in csvData[:2].iterrows():
         st.header(row['title'])
         st.write(row['description'])
-        st.image(f"static/images/{row['image']}")
+        url_icon = row['image']
+        response = requests.get(url_icon)
+        img = Image.open(BytesIO(response.content))
+        st.image(img)
         st.write("[Source Code]("+row['url']+')')
 with col5:
     for index,row in csvData[2:4].iterrows():
         st.header(row['title'])
         st.write(row['description'])
-        st.image(f"static/images/{row['image']}")
-        st.write("[Source Code]("+row['url']+')')
+        url_icon = row['image']
+        response = requests.get(url_icon)
+        img = Image.open(BytesIO(response.content))
+        st.image(img)
+        st.write("[Source Code](" + row['url'] + ')')
 
 
 #with col5:
